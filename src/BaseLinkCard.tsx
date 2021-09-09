@@ -1,11 +1,14 @@
 import pinOutlined from './icons/pin_outline.svg'
 import pinFilled from './icons/pin_filled.svg'
-import {Link} from './Link'
+import {Link, linksMapState, pinnedLinkIDsState} from './Link'
 import {useDrag, useRefresh} from 'muuri-react'
 import {useWindowSize} from 'react-use-size'
 import {useMemo} from 'react'
 import {remToPx} from './utils'
 import openInNewIcon from './icons/open_in_new_outline.svg'
+import {useRecoilValue, useSetRecoilState} from 'recoil'
+import produce from 'immer'
+import React from 'react'
 
 export type BaseLinkCardProps = {
   link: Link,
@@ -35,7 +38,7 @@ function BaseLinkCard(props: BaseLinkCardProps) {
       <span className={'text-gray-500 truncate'}>{link.description}</span>
     </div>
     <div
-      className={'absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-white via-white opacity-0 group-hover:opacity-100 duration-100'}/>
+      className={'absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-white via-white duration-100 ' + (props.link.pinned ? '' : 'opacity-0 group-hover:opacity-100')}/>
     <button
       className={'absolute right-0 top-0 h-full w-14 flex items-center justify-center duration-100 group-hover:opacity-50 hover:bg-gray-300 ' + (props.showPinned ? 'opacity-50' : 'opacity-0')}
       title={link.pinned ? 'Unpin this link' : 'Pin this link'}
@@ -50,16 +53,30 @@ function BaseLinkCard(props: BaseLinkCardProps) {
   </a>
 }
 
-export function LinkCard(props: { link: Link, width: string, section: 'pinned' | 'links', onPinClicked: () => void }) {
+export function LinkCard(props: { linkID: string, width: string, section: 'pinned' | 'links' }) {
   const isDragging = useDrag()
   useRefresh([props.width])
+  const linksMap = useRecoilValue(linksMapState)
+  const setPinnedLinkIDs = useSetRecoilState(pinnedLinkIDsState)
 
-  return <div className={'h-16 m-4'} style={{width: props.width}}>
+  const link = linksMap.get(props.linkID)!
+  return <div key={props.linkID} className={'h-24 m-0 p-4'} style={{width: props.width}}>
     <div className={'relative'}>
       <BaseLinkCard
-        link={props.link}
-        showPinned={props.section === 'pinned' ? false : props.link.pinned}
-        onPinClicked={props.onPinClicked}
+        link={link}
+        showPinned={props.section === 'pinned' ? false : link.pinned}
+        onPinClicked={() => {
+          setPinnedLinkIDs(oldIDs => produce(oldIDs, draft => {
+            if (link.pinned) {
+              const removeI = draft.indexOf(props.linkID)
+              if (removeI > -1) {
+                draft.splice(removeI, 1)
+              }
+            } else {
+              draft.push(props.linkID)
+            }
+          }))
+        }}
         disabled={isDragging}/>
     </div>
   </div>
@@ -70,6 +87,6 @@ export function useCardWidth() {
   return useMemo(() => {
     const minWidthPx = remToPx(24)
     const columnCount = Math.max(Math.floor(width / minWidthPx), 1)
-    return `calc(${1 / columnCount * 100 - 0.2}% - 2rem)`
+    return `${1 / columnCount * 100 - 0.2}%`
   }, [width])
 }

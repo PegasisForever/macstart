@@ -1,4 +1,5 @@
 import {ReactChild} from 'react'
+import React from 'react'
 
 function Link(props: { children: ReactChild, href: string }) {
   return <a className={'underline'} href={props.href} target="_blank" rel="noreferrer">{props.children}</a>

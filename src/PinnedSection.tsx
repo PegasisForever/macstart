@@ -2,23 +2,25 @@ import {MuuriComponent} from 'muuri-react'
 import {DecoratedItem} from 'muuri-react/src/interfaces/item'
 import {DraggerCancelEvent, DraggerEndEvent, DraggerMoveEvent, DraggerStartEvent} from 'muuri-react/src/muuri'
 import {LinkCard, useCardWidth} from './BaseLinkCard'
-import favicon from './favicon.png'
-import React from 'react'
-import {Link} from './Link'
+import React, {Ref, useRef} from 'react'
+import {pinnedLinkIDsState} from './Link'
 import {SectionTitle} from './SectionTitle'
+import {useRecoilValue} from 'recoil'
+import {DecoratedGrid} from 'muuri-react/dist/types/interfaces'
 
 export function PinnedSection() {
   const cardWidth = useCardWidth()
-  const links = [
-    new Link('a', 'Pegas.is', 'https://pegas.is', favicon, 'awawa', true),
-    new Link('b', 'Pegas.is', 'https://pegas.is', favicon, 'awawa', true),
-    new Link('c', 'Pegas.is', 'https://pegas.is', favicon, 'awawa', true),
-    new Link('d', 'Pegas.is', 'https://pegas.is', favicon, 'awawa', true),
-  ]
+  const pinnedLinkIDs = useRecoilValue(pinnedLinkIDsState)
+  const gridRef = useRef<DecoratedGrid>()
 
-  return <div className={'bg-gray-200 pt-4 pb-2'}>
+  if (pinnedLinkIDs.length === 0) return null
+
+  return <div className={'bg-gray-200 pt-4 pb-2 pl-4 pr-4'}>
     <SectionTitle>Pinned</SectionTitle>
-    <MuuriComponent dragEnabled
+    <MuuriComponent sort={pinnedLinkIDs}
+                    ref={gridRef as Ref<DecoratedGrid>}
+                    addOptions={{show: false}}
+                    dragEnabled
                     dragFixed
                     dragStartPredicate={(item: DecoratedItem, e: DraggerStartEvent | DraggerMoveEvent | DraggerEndEvent | DraggerCancelEvent) => {
                       const isTouch = (e.srcEvent instanceof TouchEvent) || (e.srcEvent instanceof PointerEvent && e.srcEvent.pointerType !== 'mouse')
@@ -30,8 +32,7 @@ export function PinnedSection() {
                         if (e.type === 'move') return true
                       }
                     }}>
-      {links.map(link => <LinkCard key={link.id} link={link} width={cardWidth} section={'pinned'} onPinClicked={() => {
-      }}/>)}
+      {pinnedLinkIDs.map(id => <LinkCard key={id} linkID={id} width={cardWidth} section={'pinned'}/>)}
     </MuuriComponent>
   </div>
 }

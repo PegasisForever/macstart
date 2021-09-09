@@ -5,7 +5,10 @@ import './index.css'
 import {PinnedSection} from './PinnedSection'
 import {LinksSection} from './LinksSection'
 import {PegaFooter} from './Footer'
+import {RecoilRoot} from 'recoil'
+import {enableMapSet} from 'immer'
 
+enableMapSet()
 
 function App() {
   return <div>
@@ -22,8 +25,8 @@ function App() {
 }
 
 ReactDOM.render(
-  <React.StrictMode>
+  <RecoilRoot>
     <App/>
-  </React.StrictMode>,
+  </RecoilRoot>,
   document.getElementById('root'),
 )
