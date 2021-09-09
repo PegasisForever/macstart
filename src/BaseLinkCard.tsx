@@ -25,13 +25,16 @@ function BaseLinkCard(props: BaseLinkCardProps) {
       if (props.disabled) e.preventDefault()
     }}>
     {link.iconUrl ? <img className={'w-12 h-12 rounded-md'} src={link.iconUrl} alt={''}/> : null}
-    <div className={'flex flex-col pl-2'}>
-      <span className={'text-xl font-medium'}>
+    <div className={'flex flex-col flex-1 min-w-0 pl-2'}>
+      <span className={'text-xl font-medium truncate'}>
         {link.title}
-        <img className={'w-5 h-5 ml-1 mb-0.5 inline duration-100 opacity-0 group-hover:opacity-40'} src={openInNewIcon} alt=""/>
+        <img className={'w-5 h-5 ml-1 mb-0.5 inline duration-100 opacity-0 group-hover:opacity-40'} src={openInNewIcon}
+             alt=""/>
       </span>
-      <span className={'text-gray-500'}>{link.description}</span>
+      <span className={'text-gray-500 truncate'}>{link.description}</span>
     </div>
+    <div
+      className={'absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-white via-white opacity-0 group-hover:opacity-100 duration-100'}/>
     <button
       className={'absolute right-0 top-0 h-full w-14 flex items-center justify-center duration-100 group-hover:opacity-50 hover:bg-gray-300 ' + (props.showPinned ? 'opacity-50' : 'opacity-0')}
       title={link.pinned ? 'Unpin this link' : 'Pin this link'}
@@ -64,8 +67,8 @@ export function LinkCard(props: { link: Link, width: string, section: 'pinned' |
 export function useCardWidth() {
   const {width} = useWindowSize()
   return useMemo(() => {
-    const minWidthPx = remToPx(22)
-    const columnCount = Math.floor(width / minWidthPx)
+    const minWidthPx = remToPx(24)
+    const columnCount = Math.max(Math.floor(width / minWidthPx), 1)
     return `calc(${1 / columnCount * 100 - 0.2}% - 2rem)`
   }, [width])
 }
