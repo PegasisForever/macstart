@@ -26,7 +26,8 @@ function BaseLinkCard(props: BaseLinkCardProps) {
     }}>
     {link.iconUrl ? <img className={'w-12 h-12 rounded-md'} src={link.iconUrl} alt={''}/> : null}
     <div className={'flex flex-col flex-1 min-w-0 pl-2'}>
-      <span className={'text-xl font-medium truncate'}>
+      <span className={'text-xl font-medium truncate'}
+            title={props.link.title}>
         {link.title}
         <img className={'w-5 h-5 ml-1 mb-0.5 inline duration-100 opacity-0 group-hover:opacity-40'} src={openInNewIcon}
              alt=""/>
