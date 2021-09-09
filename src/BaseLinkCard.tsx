@@ -3,8 +3,9 @@ import pinFilled from './icons/pin_filled.svg'
 import {Link} from './Link'
 import {useDrag, useRefresh} from 'muuri-react'
 import {useWindowSize} from 'react-use-size'
-import React, {useMemo} from 'react'
+import {useMemo} from 'react'
 import {remToPx} from './utils'
+import openInNewIcon from './icons/open_in_new_outline.svg'
 
 export type BaseLinkCardProps = {
   link: Link,
@@ -25,7 +26,10 @@ function BaseLinkCard(props: BaseLinkCardProps) {
     }}>
     {link.iconUrl ? <img className={'w-12 h-12 rounded-md'} src={link.iconUrl} alt={''}/> : null}
     <div className={'flex flex-col pl-2'}>
-      <span className={'text-xl font-medium'}>{link.title}</span>
+      <span className={'text-xl font-medium'}>
+        {link.title}
+        <img className={'w-5 h-5 ml-1 mb-0.5 inline duration-100 opacity-0 group-hover:opacity-40'} src={openInNewIcon} alt=""/>
+      </span>
       <span className={'text-gray-500'}>{link.description}</span>
     </div>
     <button

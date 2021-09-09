@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import {PinnedSection} from './PinnedSection'
 import {LinksSection} from './LinksSection'
+import {PegaFooter} from './Footer'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     </h1>
     <PinnedSection/>
     <LinksSection/>
+    <PegaFooter/>
   </div>
 }
 
