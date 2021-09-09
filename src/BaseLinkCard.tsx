@@ -23,7 +23,7 @@ function BaseLinkCard(props: BaseLinkCardProps) {
     onClick={(e) => {
       if (props.disabled) e.preventDefault()
     }}>
-    <img className={'w-12 h-12 rounded-md'} src={link.iconUrl} alt={''}/>
+    {link.iconUrl ? <img className={'w-12 h-12 rounded-md'} src={link.iconUrl} alt={''}/> : null}
     <div className={'flex flex-col pl-2'}>
       <span className={'text-xl font-medium'}>{link.title}</span>
       <span className={'text-gray-500'}>{link.description}</span>
@@ -35,7 +35,9 @@ function BaseLinkCard(props: BaseLinkCardProps) {
         e.preventDefault()
         props.onPinClicked()
       }}>
-      <img className={'w-8 h-8'} src={link.pinned ? pinFilled : pinOutlined} alt=""/>
+      {link.pinned ?
+        <img className={'w-8 h-8'} src={pinFilled} alt=""/> :
+        <img className={'w-8 h-8 transform rotate-45'} src={pinOutlined} alt=""/>}
     </button>
   </a>
 }
@@ -60,6 +62,6 @@ export function useCardWidth() {
   return useMemo(() => {
     const minWidthPx = remToPx(22)
     const columnCount = Math.floor(width / minWidthPx)
-    return `calc(${1 / columnCount * 100 - 0.5}% - 2rem)`
+    return `calc(${1 / columnCount * 100 - 0.2}% - 2rem)`
   }, [width])
 }

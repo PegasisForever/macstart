@@ -16,7 +16,7 @@ export function PinnedSection() {
     new Link('d', 'Pegas.is', 'https://pegas.is', favicon, 'awawa', true),
   ]
 
-  return <>
+  return <div className={'bg-gray-200 pt-4 pb-2'}>
     <SectionTitle>Pinned</SectionTitle>
     <MuuriComponent dragEnabled
                     dragFixed
@@ -33,5 +33,5 @@ export function PinnedSection() {
       {links.map(link => <LinkCard key={link.id} link={link} width={cardWidth} section={'pinned'} onPinClicked={() => {
       }}/>)}
     </MuuriComponent>
-  </>
+  </div>
 }
