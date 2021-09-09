@@ -3,6 +3,7 @@ import React from 'react'
 import {Link} from './Link'
 import favicon from './favicon.png'
 import {MuuriComponent} from 'muuri-react'
+import {SectionTitle} from './SectionTitle'
 
 export function LinksSection() {
   const cardWidth = useCardWidth()
@@ -14,7 +15,7 @@ export function LinksSection() {
   ]
 
   return <>
-    <p>Links</p>
+    <SectionTitle>Links</SectionTitle>
     <MuuriComponent>
       {links.map(link => <LinkCard key={link.id} link={link} width={cardWidth} section={'links'} onPinClicked={() => {
       }}/>)}

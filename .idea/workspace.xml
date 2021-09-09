@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="pinned section and links section">
-      <change afterPath="$PROJECT_DIR$/src/utils.ts" afterDir="false" />
+    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="responsive grid">
+      <change afterPath="$PROJECT_DIR$/src/SectionTitle.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BaseLinkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/BaseLinkCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LinksSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinksSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PinnedSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/PinnedSection.tsx" afterDir="false" />
     </list>
@@ -91,7 +88,7 @@
       <workItem from="1631131326275" duration="845000" />
       <workItem from="1631133271925" duration="118000" />
       <workItem from="1631133425164" duration="52000" />
-      <workItem from="1631133500390" duration="24152000" />
+      <workItem from="1631133500390" duration="24660000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1631130185591</created>
@@ -128,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631157199533</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="responsive grid">
+      <created>1631159139295</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1631159139295</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +156,7 @@
     <MESSAGE value="link card" />
     <MESSAGE value="pin button" />
     <MESSAGE value="pinned section and links section" />
-    <option name="LAST_COMMIT_MESSAGE" value="pinned section and links section" />
+    <MESSAGE value="responsive grid" />
+    <option name="LAST_COMMIT_MESSAGE" value="responsive grid" />
   </component>
 </project>

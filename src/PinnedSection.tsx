@@ -5,6 +5,7 @@ import {LinkCard, useCardWidth} from './BaseLinkCard'
 import favicon from './favicon.png'
 import React from 'react'
 import {Link} from './Link'
+import {SectionTitle} from './SectionTitle'
 
 export function PinnedSection() {
   const cardWidth = useCardWidth()
@@ -16,7 +17,7 @@ export function PinnedSection() {
   ]
 
   return <>
-    <p>Pinned</p>
+    <SectionTitle>Pinned</SectionTitle>
     <MuuriComponent dragEnabled
                     dragFixed
                     dragStartPredicate={(item: DecoratedItem, e: DraggerStartEvent | DraggerMoveEvent | DraggerEndEvent | DraggerCancelEvent) => {
