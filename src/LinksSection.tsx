@@ -1,21 +1,11 @@
-import {BaseLinkCard} from './BaseLinkCard'
+import {LinkCard, useCardWidth} from './BaseLinkCard'
 import React from 'react'
 import {Link} from './Link'
 import favicon from './favicon.png'
 import {MuuriComponent} from 'muuri-react'
 
-function LinksCard(props: { link: Link }) {
-  return <div className={'h-16 m-4'} style={{width: 'calc(33% - 2rem)'}}>
-    <BaseLinkCard
-      link={props.link}
-      showPinned={props.link.pinned}
-      onPinClicked={() => {
-      }}
-      disabled={false}/>
-  </div>
-}
-
 export function LinksSection() {
+  const cardWidth = useCardWidth()
   const links = [
     new Link('a', 'Pegas.is', 'https://pegas.is', favicon, 'awawa', false),
     new Link('b', 'Pegas.is', 'https://pegas.is', favicon, 'awawa', false),
@@ -26,7 +16,8 @@ export function LinksSection() {
   return <>
     <p>Links</p>
     <MuuriComponent>
-      {links.map(link => <LinksCard key={link.id} link={link}/>)}
+      {links.map(link => <LinkCard key={link.id} link={link} width={cardWidth} section={'links'} onPinClicked={() => {
+      }}/>)}
     </MuuriComponent>
   </>
 }

@@ -1,27 +1,13 @@
-import {MuuriComponent, useDrag} from 'muuri-react'
+import {MuuriComponent} from 'muuri-react'
 import {DecoratedItem} from 'muuri-react/src/interfaces/item'
 import {DraggerCancelEvent, DraggerEndEvent, DraggerMoveEvent, DraggerStartEvent} from 'muuri-react/src/muuri'
-import {BaseLinkCard} from './BaseLinkCard'
+import {LinkCard, useCardWidth} from './BaseLinkCard'
 import favicon from './favicon.png'
 import React from 'react'
 import {Link} from './Link'
 
-function PinnedLinkCard(props: { link: Link }) {
-  const isDragging = useDrag()
-
-  return <div className={'h-16 m-4'} style={{width: 'calc(33% - 2rem)'}}>
-    <div className={'relative'}>
-      <BaseLinkCard
-        link={props.link}
-        showPinned={false}
-        onPinClicked={() => {
-        }}
-        disabled={isDragging}/>
-    </div>
-  </div>
-}
-
 export function PinnedSection() {
+  const cardWidth = useCardWidth()
   const links = [
     new Link('a', 'Pegas.is', 'https://pegas.is', favicon, 'awawa', true),
     new Link('b', 'Pegas.is', 'https://pegas.is', favicon, 'awawa', true),
@@ -43,7 +29,8 @@ export function PinnedSection() {
                         if (e.type === 'move') return true
                       }
                     }}>
-      {links.map(link => <PinnedLinkCard key={link.id} link={link}/>)}
+      {links.map(link => <LinkCard key={link.id} link={link} width={cardWidth} section={'pinned'} onPinClicked={() => {
+      }}/>)}
     </MuuriComponent>
   </>
 }
