@@ -1,18 +1,15 @@
+import 'web-animations-js'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import {LinkCard, LinkCardPlaceholder} from './LinkCard'
-import favicon from './favicon.png'
+import {PinnedSection} from './PinnedSection'
+import {LinksSection} from './LinksSection'
+
 
 function App() {
-  return <div className={'flex flex-wrap justify-center items-start'}>
-    <LinkCard link={'https://pegas.is'} displayText={'Pegas.is'} description={'awawa'} iconUrl={favicon}/>
-    <LinkCard link={'https://pegas.is'} displayText={'Pegas.is'} iconUrl={favicon} pinned/>
-    <LinkCard link={'https://pegas.is'} displayText={'Pegas.is'} iconUrl={favicon}/>
-    <LinkCard link={'https://pegas.is'} displayText={'Pegas.is'} iconUrl={favicon}/>
-    <LinkCardPlaceholder/>
-    <LinkCardPlaceholder/>
-    <LinkCardPlaceholder/>
+  return <div>
+    <PinnedSection/>
+    <LinksSection/>
   </div>
 }
 
