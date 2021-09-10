@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="mobile optimization">
+    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="fix content jumping when pinned changes size">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PinnedSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/PinnedSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +105,7 @@
       <workItem from="1631133271925" duration="118000" />
       <workItem from="1631133425164" duration="52000" />
       <workItem from="1631133500390" duration="40913000" />
-      <workItem from="1631219607373" duration="20048000" />
+      <workItem from="1631219607373" duration="20290000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1631130185591</created>
@@ -241,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631238946183</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fix content jumping when pinned changes size">
+      <created>1631240304138</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1631240304138</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +285,8 @@
     <MESSAGE value="change npm flags" />
     <MESSAGE value="responsive title &amp; card" />
     <MESSAGE value="mobile optimization" />
-    <option name="LAST_COMMIT_MESSAGE" value="mobile optimization" />
+    <MESSAGE value="fix content jumping when pinned changes size" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix content jumping when pinned changes size" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
