@@ -24,6 +24,13 @@ export class Link {
       pinned,
     )
   }
+
+  includes(text: string): boolean {
+    return this.id.toLowerCase().includes(text) ||
+      this.url.toLowerCase().includes(text) ||
+      this.title.toLowerCase().includes(text) ||
+      this.description.toLowerCase().includes(text)
+  }
 }
 
 const links = [

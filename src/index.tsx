@@ -9,6 +9,7 @@ import {RecoilRoot} from 'recoil'
 import {enableMapSet} from 'immer'
 import {PinnedLinkIDsSubscriber} from './Link'
 import {useReadyStateEffect} from 'react-ready-state-effect'
+import {SearchBar} from './SearchBar'
 
 enableMapSet()
 
@@ -25,6 +26,7 @@ function App() {
         beta
       </span>
     </h1>
+    <SearchBar/>
     <PinnedSection/>
     <LinksSection/>
     <PegaFooter/>

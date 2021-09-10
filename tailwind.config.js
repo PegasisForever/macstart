@@ -9,9 +9,10 @@ module.exports = {
             minWidth: {
                 card: '18rem',
             },
-            widths:{
-                '88':'22rem',
-            }
+            spacing: {
+                '88': '22rem',
+                '128': '32rem',
+            },
         },
     },
     variants: {

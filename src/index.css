@@ -25,3 +25,7 @@
 .anchor-none {
     overflow-anchor: none;
 }
+
+::selection {
+    @apply bg-yellow-300;
+}
