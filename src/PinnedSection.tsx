@@ -16,7 +16,7 @@ export function PinnedSection() {
 
   if (pinnedLinkIDs.length === 0) return null
 
-  return <div className={'bg-gray-200 pt-4 pb-6 md:pb-4 pl-4 pr-4'}>
+  return <div className={'bg-gray-200 pt-4 pb-6 md:pb-4 pl-4 pr-4 anchor-none'}>
     <SectionTitle>Pinned</SectionTitle>
     <MuuriComponent sort={pinnedLinkIDs}
                     ref={gridRef as Ref<DecoratedGrid>}

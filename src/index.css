@@ -21,3 +21,7 @@
 .muuri-item-dragging .link-card {
     @apply transform scale-110 opacity-80;
 }
+
+.anchor-none {
+    overflow-anchor: none;
+}
