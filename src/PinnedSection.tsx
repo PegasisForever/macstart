@@ -21,19 +21,21 @@ export function PinnedSection() {
       Pinned
       <span className={'text-gray-500 text-base md:pl-2 block md:inline'}>Drag and drop to rearrange cards.</span>
     </SectionTitle>
-    <MuuriComponent sort={pinnedLinkIDs}
-                    ref={gridRef as Ref<DecoratedGrid>}
-                    addOptions={{show: false}}
-                    dragHandle={isTouchScreen ? '.mobile-drag-handle' : undefined}
-                    dragEnabled
-                    dragFixed
-                    dragStartPredicate={(item: DecoratedItem, e: DraggerStartEvent | DraggerMoveEvent | DraggerEndEvent | DraggerCancelEvent) => {
-                      if (e.type === 'move') return true
-                    }}
-                    onDragEnd={item => {
-                      const linkOrder = item.getGrid().getItems().map(item => item.getKey() as string)
-                      setPinnedLinkIDs(linkOrder)
-                    }}>
+    <MuuriComponent
+      key={'pinned-muuri'}
+      sort={pinnedLinkIDs}
+      ref={gridRef as Ref<DecoratedGrid>}
+      addOptions={{show: false}}
+      dragHandle={isTouchScreen ? '.mobile-drag-handle' : undefined}
+      dragEnabled
+      dragFixed
+      dragStartPredicate={(item: DecoratedItem, e: DraggerStartEvent | DraggerMoveEvent | DraggerEndEvent | DraggerCancelEvent) => {
+        if (e.type === 'move') return true
+      }}
+      onDragEnd={item => {
+        const linkOrder = item.getGrid().getItems().map(item => item.getKey() as string)
+        setPinnedLinkIDs(linkOrder)
+      }}>
       {pinnedLinkIDs.map(id => <LinkCard key={id} linkID={id} width={cardWidth} section={'pinned'}/>)}
     </MuuriComponent>
   </div>

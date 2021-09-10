@@ -17,14 +17,16 @@ export function LinksSection() {
   })
 
   const filter = (item: any) => {
+    if (searchText === '') return true
     const linkID = item.linkID as string
     return linksMap.get(linkID)!.includes(searchText)
   }
 
   return <>
-    {linksSections.map(({name, links}) => <div key={name} className={'pl-4 pr-4'}>
-      <SectionTitle className={'mt-4 md:mt-8'} showDivider>{name}</SectionTitle>
+    {linksSections.map(({name, links}) => <div key={name} className={'pl-4 pr-4 mt-4 md:mt-8'}>
+      <SectionTitle showDivider>{name}</SectionTitle>
       <MuuriComponent
+        key={`${name}-section-muuri`}
         addOptions={{show: false}}
         // @ts-ignore
         propsToData={propsToData}
