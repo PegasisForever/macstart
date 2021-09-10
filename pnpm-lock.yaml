@@ -12,6 +12,7 @@ specifiers:
   postcss: ^7
   react: ^17.0.2
   react-dom: ^17.0.2
+  react-ready-state-effect: ^1.0.3
   react-scripts: 4.0.3
   react-use-size: ^2.0.3
   recoil: ^0.4.1
@@ -28,6 +29,7 @@ dependencies:
   muuri-react: github.com/marcelchastain/muuri-react/f4bbdee536dd826dde0bac4f2e0bf2ac4551d268_muuri@0.9.5+react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-ready-state-effect: 1.0.3_react@17.0.2
   react-scripts: 4.0.3_react@17.0.2+typescript@4.4.2
   react-use-size: 2.0.3_react@17.0.2
   recoil: 0.4.1_react-dom@17.0.2+react@17.0.2
@@ -10293,6 +10295,14 @@ packages:
 
   /react-is/17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
+    dev: false
+
+  /react-ready-state-effect/1.0.3_react@17.0.2:
+    resolution: {integrity: sha512-DAd5F9jNPW2e+ZL8C/W3ffA0rFVjh8c/V3YYVZFfOE5bkX79a4fmrrYELmUWWe3ycmhjY0nbm899GAsD0XefMA==}
+    peerDependencies:
+      react: ^16.8.6
+    dependencies:
+      react: 17.0.2
     dev: false
 
   /react-refresh/0.8.3:
