@@ -1,4 +1,4 @@
-import {atom, selector} from 'recoil'
+import {atom, selector, useRecoilValue} from 'recoil'
 import {immerable} from 'immer'
 
 export class Link {
@@ -114,13 +114,13 @@ const links = [
 
 export const pinnedLinkIDsState = atom<Array<string>>({
   key: 'pinnedLinkIDsState',
-  default: ['oscar'],
+  default: JSON.parse(window.localStorage.getItem('pinned-links') ?? '[]'),
 })
 
 export const linksMapState = selector<Map<string, Link>>({
   key: 'linksMapState',
   get: ({get}) => {
-    const pinnedLinkIDs=new Set(get(pinnedLinkIDsState))
+    const pinnedLinkIDs = new Set(get(pinnedLinkIDsState))
     const linksMap = new Map<string, Link>()
     for (const link of links) {
       linksMap.set(link.id, link.copyWithPinned(pinnedLinkIDs.has(link.id)))
@@ -247,4 +247,10 @@ export const linkSectionsState = selector<Array<{ name: string, links: Array<Lin
     })
   },
 })
+
+export function PinnedLinkIDsSubscriber() {
+  const pinnedLinkIDs = useRecoilValue(pinnedLinkIDsState)
+  window.localStorage.setItem('pinned-links', JSON.stringify(pinnedLinkIDs))
+  return null
+}
 

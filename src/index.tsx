@@ -7,6 +7,7 @@ import {LinksSection} from './LinksSection'
 import {PegaFooter} from './Footer'
 import {RecoilRoot} from 'recoil'
 import {enableMapSet} from 'immer'
+import {PinnedLinkIDsSubscriber} from './Link'
 
 enableMapSet()
 
@@ -21,6 +22,7 @@ function App() {
     <PinnedSection/>
     <LinksSection/>
     <PegaFooter/>
+    <PinnedLinkIDsSubscriber/>
   </div>
 }
 

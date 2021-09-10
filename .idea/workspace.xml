@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="add links">
+    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="allow pin cards">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BaseLinkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/BaseLinkCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Link.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinksSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinksSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PinnedSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/PinnedSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SectionTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/SectionTitle.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +99,7 @@
       <workItem from="1631133271925" duration="118000" />
       <workItem from="1631133425164" duration="52000" />
       <workItem from="1631133500390" duration="40913000" />
-      <workItem from="1631219607373" duration="12250000" />
+      <workItem from="1631219607373" duration="13120000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1631130185591</created>
@@ -184,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631220931651</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="allow pin cards">
+      <created>1631231995735</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1631231995735</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +215,8 @@
     <MESSAGE value="add footer" />
     <MESSAGE value="minor ui changes" />
     <MESSAGE value="add links" />
-    <option name="LAST_COMMIT_MESSAGE" value="add links" />
+    <MESSAGE value="allow pin cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="allow pin cards" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

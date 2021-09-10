@@ -5,12 +5,12 @@ import {LinkCard, useCardWidth} from './BaseLinkCard'
 import React, {Ref, useRef} from 'react'
 import {pinnedLinkIDsState} from './Link'
 import {SectionTitle} from './SectionTitle'
-import {useRecoilValue} from 'recoil'
+import {useRecoilState} from 'recoil'
 import {DecoratedGrid} from 'muuri-react/dist/types/interfaces'
 
 export function PinnedSection() {
   const cardWidth = useCardWidth()
-  const pinnedLinkIDs = useRecoilValue(pinnedLinkIDsState)
+  const [pinnedLinkIDs, setPinnedLinkIDs] = useRecoilState(pinnedLinkIDsState)
   const gridRef = useRef<DecoratedGrid>()
 
   if (pinnedLinkIDs.length === 0) return null
@@ -31,6 +31,10 @@ export function PinnedSection() {
                       } else {
                         if (e.type === 'move') return true
                       }
+                    }}
+                    onDragEnd={item => {
+                      const linkOrder = item.getGrid().getItems().map(item => item.getKey() as string)
+                      setPinnedLinkIDs(linkOrder)
                     }}>
       {pinnedLinkIDs.map(id => <LinkCard key={id} linkID={id} width={cardWidth} section={'pinned'}/>)}
     </MuuriComponent>
