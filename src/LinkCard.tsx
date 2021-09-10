@@ -7,7 +7,6 @@ import {isTouchScreen, remToPx} from './utils'
 import openInNewIcon from './icons/open_in_new_outline.svg'
 import {useRecoilValue, useSetRecoilState} from 'recoil'
 import produce from 'immer'
-import dragHandleIcon from './icons/drag_handle.svg'
 import {useSortable} from '@dnd-kit/sortable'
 import {CSS} from '@dnd-kit/utilities'
 
@@ -24,20 +23,15 @@ const BaseLinkCard = forwardRef<HTMLAnchorElement, BaseLinkCardProps>((props, re
   return <a
     draggable={false}
     ref={ref}
-    className={'link-card relative group shadow-md hover:shadow-xl bg-white rounded-md duration-100 flex justify-start items-center p-2 overflow-hidden ' + (props.showDragHandle ? 'pl-8' : '')}
+    className={'link-card relative group shadow-md hover:shadow-xl bg-white rounded-md duration-100 flex justify-start items-center p-2 overflow-hidden pl-4'}
     href={link.url}
     target="_blank"
     rel="noreferrer"
     onClick={(e) => {
       if (props.disabled) e.preventDefault()
     }}>
-    {props.showDragHandle ?
-      <div className={'absolute h-full left-0 top-0 w-12 flex items-center mobile-drag-handle'}>
-        <img className={'opacity-50 w-8 h-8'} src={dragHandleIcon} alt=""/>
-      </div> :
-      null}
     {link.iconUrl ? <img className={'w-12 h-12 rounded-md'} src={link.iconUrl} alt={''}/> : null}
-    <div className={'flex flex-col flex-1 min-w-0 ' + ((props.showDragHandle && link.iconUrl === null) ? '' : 'pl-2')}>
+    <div className={'flex flex-col flex-1 min-w-0 ' + (link.iconUrl === null ? '' : 'pl-2')}>
       <span className={'text-xl font-medium truncate'}
             title={props.link.title}>
         {link.title}
@@ -71,8 +65,15 @@ export const LinkCard = forwardRef<HTMLDivElement, LinkCardProps>((props, ref) =
   const link = linksMap.get(props.linkID)!
   // todo className + (props.isDragging ? 'transform scale-110 opacity-80' : '')
   return <div key={props.linkID}
-              className={'p-2 md:p-4 min-w-0 ' + (props.invisible ? 'opacity-0 ' : '')}
+              className={'p-2 md:p-4 min-w-0 ' + (props.invisible ? 'opacity-0 ' : '') + (props.isDragging ? 'transform scale-110 opacity-80' : '')}
               ref={ref}
+              onContextMenu={e => {
+                if (isTouchScreen && props.section === 'pinned') {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  return false
+                }
+              }}
               {...props.elemAttributes}>
     <BaseLinkCard
       link={link}

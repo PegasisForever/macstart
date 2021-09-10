@@ -11,15 +11,17 @@ export function PinnedSection() {
   const gridColumns = useGridColumns()
   const [activeId, setActiveId] = useState<string | null>(null)
   const [pinnedLinkIDs, setPinnedLinkIDs] = useRecoilState(pinnedLinkIDsState)
-  const activationConstraint = {
-    distance: 1,
-  }
   const sensors = useSensors(
     useSensor(MouseSensor, {
-      activationConstraint,
+      activationConstraint: {
+        distance: 1,
+      },
     }),
     useSensor(TouchSensor, {
-      activationConstraint,
+      activationConstraint: {
+        delay: 200,
+        tolerance: 5,
+      },
     }),
   )
 
@@ -43,7 +45,8 @@ export function PinnedSection() {
   return <div className={'bg-gray-200 pt-4 pb-6 md:pb-4 pl-4 pr-4 anchor-none'}>
     <SectionTitle>
       Pinned
-      <span className={'text-gray-500 text-base md:pl-2 block md:inline font-normal'}>Drag and drop to rearrange cards.</span>
+      <span
+        className={'text-gray-500 text-base md:pl-2 block md:inline font-normal'}>Drag and drop to rearrange cards.</span>
     </SectionTitle>
     <DndContext
       sensors={sensors}
