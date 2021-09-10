@@ -1,4 +1,4 @@
-import {LinkCard, useCardWidth} from './BaseLinkCard'
+import {LinkCard, useCardWidth} from './LinkCard'
 import React from 'react'
 import {MuuriComponent} from 'muuri-react'
 import {SectionTitle} from './SectionTitle'
@@ -11,7 +11,7 @@ export function LinksSection() {
 
   return <>
     {linksSections.map(({name, links}) => <div key={name} className={'pl-4 pr-4'}>
-      <SectionTitle className={'mt-8'}>{name}</SectionTitle>
+      <SectionTitle className={'mt-4 md:mt-8'} showDivider>{name}</SectionTitle>
       <MuuriComponent addOptions={{show: false}}>
         {links.map(({id}) =>
           <LinkCard key={id}

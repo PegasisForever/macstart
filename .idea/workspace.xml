@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="netlify">
-      <change beforePath="$PROJECT_DIR$/netlify.toml" beforeDir="false" afterPath="$PROJECT_DIR$/netlify.toml" afterDir="false" />
+    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="change npm flags">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BaseLinkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinksSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinksSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PinnedSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/PinnedSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SectionTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/SectionTitle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +111,7 @@
       <workItem from="1631133271925" duration="118000" />
       <workItem from="1631133425164" duration="52000" />
       <workItem from="1631133500390" duration="40913000" />
-      <workItem from="1631219607373" duration="15015000" />
+      <workItem from="1631219607373" duration="17700000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1631130185591</created>
@@ -218,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631234493972</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="change npm flags">
+      <created>1631234639994</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1631234639994</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +267,8 @@
     <MESSAGE value="fix loading page flash" />
     <MESSAGE value="disable pin when dragging card" />
     <MESSAGE value="netlify" />
-    <option name="LAST_COMMIT_MESSAGE" value="netlify" />
+    <MESSAGE value="change npm flags" />
+    <option name="LAST_COMMIT_MESSAGE" value="change npm flags" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

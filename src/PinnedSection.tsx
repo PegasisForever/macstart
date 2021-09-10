@@ -1,7 +1,7 @@
 import {MuuriComponent} from 'muuri-react'
 import {DecoratedItem} from 'muuri-react/src/interfaces/item'
 import {DraggerCancelEvent, DraggerEndEvent, DraggerMoveEvent, DraggerStartEvent} from 'muuri-react/src/muuri'
-import {LinkCard, useCardWidth} from './BaseLinkCard'
+import {LinkCard, useCardWidth} from './LinkCard'
 import React, {Ref, useRef} from 'react'
 import {pinnedLinkIDsState} from './Link'
 import {SectionTitle} from './SectionTitle'
@@ -15,7 +15,7 @@ export function PinnedSection() {
 
   if (pinnedLinkIDs.length === 0) return null
 
-  return <div className={'bg-gray-200 pt-4 pb-2 pl-4 pr-4'}>
+  return <div className={'bg-gray-200 pt-4 pb-6 md:pb-4 pl-4 pr-4'}>
     <SectionTitle>Pinned</SectionTitle>
     <MuuriComponent sort={pinnedLinkIDs}
                     ref={gridRef as Ref<DecoratedGrid>}

@@ -60,7 +60,7 @@ export function LinkCard(props: { linkID: string, width: string, section: 'pinne
   const setPinnedLinkIDs = useSetRecoilState(pinnedLinkIDsState)
 
   const link = linksMap.get(props.linkID)!
-  return <div key={props.linkID} className={'h-24 m-0 p-4'} style={{width: props.width}}>
+  return <div key={props.linkID} className={'h-20 md:h-24 m-0 p-2 md:p-4'} style={{width: props.width}}>
     <div className={'relative'}>
       <BaseLinkCard
         link={link}

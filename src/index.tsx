@@ -21,7 +21,7 @@ function App() {
   return <div>
     <h1 className={'text-center text-6xl md:text-8xl mb-4 md:mb-8 mt-2 md:mt-4'}>
       MacStart
-      <span className={'text-2xl md:text-4xl bg-yellow-600 text-white rounded-lg ml-2 md:ml-4 pl-1 pr-1'}>
+      <span className={'text-2xl md:text-4xl bg-yellow-600 text-white rounded-md md:rounded-lg ml-2 md:ml-4 pl-1 pr-1'}>
         beta
       </span>
     </h1>
