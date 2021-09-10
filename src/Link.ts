@@ -117,6 +117,8 @@ const links = [
   new Link('wgen', 'Women & Gender Equity Network', 'https://msumcmaster.ca/service/wgen/', null, 'awawa'),
   new Link('fireball-academy', 'Fireball Academy', 'https://fireballacademy.mcmaster.ca/', null, 'awawa'),
   new Link('oscar', 'OSCARplus', 'https://www.oscarplusmcmaster.ca/home.htm', null, 'awawa'),
+  new Link('echo360', 'echo 360', 'https://echo360.ca/courses', null, 'awawa'),
+  new Link('mcmasterai', 'McMaster AI Society', 'https://www.mcmasterai.com/', null, 'awawa'),
 ]
 
 export const pinnedLinkIDsState = atom<Array<string>>({
@@ -201,6 +203,7 @@ const linkSections = [
       'pearson',
       'maccheck',
       'hmdl',
+      'echo360',
     ],
   },
   {
@@ -238,6 +241,12 @@ const linkSections = [
     linkIDs: [
       'fireball-academy',
       'oscar',
+    ],
+  },
+  {
+    name: 'Clubs',
+    linkIDs: [
+      'mcmasterai',
     ],
   },
 ]
