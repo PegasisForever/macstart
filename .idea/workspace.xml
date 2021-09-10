@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="disable pin when dragging card">
-      <change afterPath="$PROJECT_DIR$/netlify.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/pnpm-preinstaller/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/pnpm-preinstaller/manifest.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="netlify">
+      <change beforePath="$PROJECT_DIR$/netlify.toml" beforeDir="false" afterPath="$PROJECT_DIR$/netlify.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +14,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -99,7 +104,7 @@
       <workItem from="1631133271925" duration="118000" />
       <workItem from="1631133425164" duration="52000" />
       <workItem from="1631133500390" duration="40913000" />
-      <workItem from="1631219607373" duration="14873000" />
+      <workItem from="1631219607373" duration="15015000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1631130185591</created>
@@ -206,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631233945496</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="netlify">
+      <created>1631234493972</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1631234493972</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +252,8 @@
     <MESSAGE value="save pinned links" />
     <MESSAGE value="fix loading page flash" />
     <MESSAGE value="disable pin when dragging card" />
-    <option name="LAST_COMMIT_MESSAGE" value="disable pin when dragging card" />
+    <MESSAGE value="netlify" />
+    <option name="LAST_COMMIT_MESSAGE" value="netlify" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
