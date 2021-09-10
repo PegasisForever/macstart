@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="redirect ctrl f">
+      <change afterPath="$PROJECT_DIR$/src/DragTest.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Link.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LinksSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinksSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PinnedSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/PinnedSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SectionTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/SectionTitle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

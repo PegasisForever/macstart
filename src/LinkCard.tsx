@@ -1,14 +1,15 @@
 import pinOutlined from './icons/pin_outline.svg'
 import pinFilled from './icons/pin_filled.svg'
 import {Link, linksMapState, pinnedLinkIDsState} from './Link'
-import {useDrag, useRefresh} from 'muuri-react'
 import {useWindowSize} from 'react-use-size'
-import React, {useMemo} from 'react'
+import React, {forwardRef, useMemo} from 'react'
 import {isTouchScreen, remToPx} from './utils'
 import openInNewIcon from './icons/open_in_new_outline.svg'
 import {useRecoilValue, useSetRecoilState} from 'recoil'
 import produce from 'immer'
 import dragHandleIcon from './icons/drag_handle.svg'
+import {useSortable} from '@dnd-kit/sortable'
+import {CSS} from '@dnd-kit/utilities'
 
 export type BaseLinkCardProps = {
   link: Link,
@@ -16,12 +17,15 @@ export type BaseLinkCardProps = {
   onPinClicked: () => void,
   disabled: boolean,
   showDragHandle: boolean,
+  elemAttributes?: object,
 }
 
-function BaseLinkCard(props: BaseLinkCardProps) {
+const BaseLinkCard = forwardRef<HTMLAnchorElement, BaseLinkCardProps>((props, ref) => {
   const link = props.link
   return <a
-    className={'link-card relative group shadow-md hover:shadow-xl bg-white rounded-md duration-100 w-full h-full flex justify-start items-center p-2 overflow-hidden ' + (props.showDragHandle ? 'pl-8' : '')}
+    {...props.elemAttributes}
+    ref={ref}
+    className={'link-card relative group shadow-md hover:shadow-xl bg-white rounded-md duration-100 flex justify-start items-center p-2 overflow-hidden ' + (props.showDragHandle ? 'pl-8' : '')}
     href={link.url}
     target="_blank"
     rel="noreferrer"
@@ -57,39 +61,79 @@ function BaseLinkCard(props: BaseLinkCardProps) {
         <img className={'w-8 h-8 transform rotate-45'} src={pinOutlined} alt=""/>}
     </button>
   </a>
-}
+})
 
-export function LinkCard(props: { linkID: string, width: string, section: 'pinned' | 'links' }) {
-  const isDragging = useDrag()
-  useRefresh([props.width])
+export type LinkCardProps = { linkID: string, isDragging?: boolean, section: 'pinned' | 'links', elemAttributes?: object }
+
+export const LinkCard = forwardRef<HTMLDivElement, LinkCardProps>((props, ref) => {
   const linksMap = useRecoilValue(linksMapState)
   const setPinnedLinkIDs = useSetRecoilState(pinnedLinkIDsState)
 
   const link = linksMap.get(props.linkID)!
-  return <div key={props.linkID} className={'h-20 md:h-24 m-0 p-2 md:p-4'} style={{width: props.width}}>
-    <div className={'relative'}>
-      <BaseLinkCard
-        link={link}
-        showPinned={isTouchScreen ? true : (props.section === 'pinned' ? false : link.pinned)}
-        onPinClicked={() => {
-          if (!isDragging) {
-            setPinnedLinkIDs(oldIDs => produce(oldIDs, draft => {
-              if (link.pinned) {
-                const removeI = draft.indexOf(props.linkID)
-                if (removeI > -1) {
-                  draft.splice(removeI, 1)
-                }
-              } else {
-                draft.push(props.linkID)
+  return <div key={props.linkID}
+              className={'p-2 md:p-4'}
+              ref={ref}
+              {...props.elemAttributes}>
+    <BaseLinkCard
+      link={link}
+      showPinned={isTouchScreen ? true : (props.section === 'pinned' ? false : link.pinned)}
+      onPinClicked={() => {
+        if (!props.isDragging) {
+          setPinnedLinkIDs(oldIDs => produce(oldIDs, draft => {
+            if (link.pinned) {
+              const removeI = draft.indexOf(props.linkID)
+              if (removeI > -1) {
+                draft.splice(removeI, 1)
               }
-            }))
-          }
-        }}
-        showDragHandle={props.section === 'pinned' && link.pinned && isTouchScreen}
-        disabled={isDragging}/>
-    </div>
+            } else {
+              draft.push(props.linkID)
+            }
+          }))
+        }
+      }}
+      showDragHandle={props.section === 'pinned' && link.pinned && isTouchScreen}
+      disabled={props.isDragging === true}/>
   </div>
+})
+
+export function DraggableLinkCard(props: { linkID: string }) {
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+    isDragging: isHidden,
+  } = useSortable({
+    id: props.linkID,
+  })
+
+  const elemAttributes = {
+    ...attributes,
+    ...listeners,
+    style: {
+      transform: CSS.Transform.toString(transform),
+      transition,
+    } as any,
+  }
+
+  if (isHidden) return <div ref={setNodeRef} {...elemAttributes}/>
+
+  return <LinkCard
+    ref={setNodeRef}
+    linkID={props.linkID}
+    isDragging={false}
+    section={'pinned'}
+    elemAttributes={elemAttributes}/>
 }
+
+export const DraggingLinkCard = forwardRef<HTMLDivElement, { linkID: string }>((props, ref) => {
+  return <LinkCard
+    ref={ref}
+    linkID={props.linkID}
+    isDragging={true}
+    section={'pinned'}/>
+})
 
 export function useCardWidth() {
   const {width} = useWindowSize()
