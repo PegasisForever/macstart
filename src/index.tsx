@@ -27,6 +27,7 @@ function App() {
       </span>
     </h1>
     <SearchBar/>
+    {/*<DragTest/>*/}
     <PinnedSection/>
     <LinksSection/>
     <PegaFooter/>

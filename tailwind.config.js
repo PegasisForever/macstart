@@ -8,6 +8,7 @@ module.exports = {
             },
             minWidth: {
                 card: '18rem',
+                '96': '24rem',
             },
             spacing: {
                 '88': '22rem',
