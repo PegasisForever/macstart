@@ -2,7 +2,7 @@ import pinOutlined from './icons/pin_outline.svg'
 import pinFilled from './icons/pin_filled.svg'
 import {Link, linksMapState, pinnedLinkIDsState} from './Link'
 import {useWindowSize} from 'react-use-size'
-import React, {forwardRef, useMemo} from 'react'
+import React, {forwardRef} from 'react'
 import {isTouchScreen, remToPx} from './utils'
 import openInNewIcon from './icons/open_in_new_outline.svg'
 import {useRecoilValue, useSetRecoilState} from 'recoil'
@@ -17,13 +17,12 @@ export type BaseLinkCardProps = {
   onPinClicked: () => void,
   disabled: boolean,
   showDragHandle: boolean,
-  elemAttributes?: object,
 }
 
 const BaseLinkCard = forwardRef<HTMLAnchorElement, BaseLinkCardProps>((props, ref) => {
   const link = props.link
   return <a
-    {...props.elemAttributes}
+    draggable={false}
     ref={ref}
     className={'link-card relative group shadow-md hover:shadow-xl bg-white rounded-md duration-100 flex justify-start items-center p-2 overflow-hidden ' + (props.showDragHandle ? 'pl-8' : '')}
     href={link.url}
@@ -63,15 +62,16 @@ const BaseLinkCard = forwardRef<HTMLAnchorElement, BaseLinkCardProps>((props, re
   </a>
 })
 
-export type LinkCardProps = { linkID: string, isDragging?: boolean, section: 'pinned' | 'links', elemAttributes?: object }
+export type LinkCardProps = { linkID: string, isDragging?: boolean, section: 'pinned' | 'links', elemAttributes?: object, invisible?: boolean }
 
 export const LinkCard = forwardRef<HTMLDivElement, LinkCardProps>((props, ref) => {
   const linksMap = useRecoilValue(linksMapState)
   const setPinnedLinkIDs = useSetRecoilState(pinnedLinkIDsState)
 
   const link = linksMap.get(props.linkID)!
+  // todo className + (props.isDragging ? 'transform scale-110 opacity-80' : '')
   return <div key={props.linkID}
-              className={'p-2 md:p-4'}
+              className={'p-2 md:p-4 min-w-0 ' + (props.invisible ? 'opacity-0 ' : '')}
               ref={ref}
               {...props.elemAttributes}>
     <BaseLinkCard
@@ -117,29 +117,30 @@ export function DraggableLinkCard(props: { linkID: string }) {
     } as any,
   }
 
-  if (isHidden) return <div ref={setNodeRef} {...elemAttributes}/>
-
   return <LinkCard
     ref={setNodeRef}
     linkID={props.linkID}
-    isDragging={false}
     section={'pinned'}
-    elemAttributes={elemAttributes}/>
+    elemAttributes={elemAttributes}
+    invisible={isHidden}/>
 }
 
 export const DraggingLinkCard = forwardRef<HTMLDivElement, { linkID: string }>((props, ref) => {
   return <LinkCard
+    isDragging
     ref={ref}
     linkID={props.linkID}
-    isDragging={true}
     section={'pinned'}/>
 })
 
-export function useCardWidth() {
+export function UndraggableLinkCard(props: { linkID: string }) {
+  return <LinkCard
+    linkID={props.linkID}
+    section={'links'}/>
+}
+
+export function useGridColumns() {
   const {width} = useWindowSize()
-  return useMemo(() => {
-    const minWidthPx = remToPx(24)
-    const columnCount = Math.max(Math.floor(width / minWidthPx), 1)
-    return `${1 / columnCount * 100 - 0.2}%`
-  }, [width])
+  const minWidthPx = remToPx(24)
+  return Math.max(Math.floor(width / minWidthPx), 1)
 }

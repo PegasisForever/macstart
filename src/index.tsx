@@ -10,7 +10,6 @@ import {enableMapSet} from 'immer'
 import {PinnedLinkIDsSubscriber} from './Link'
 import {useReadyStateEffect} from 'react-ready-state-effect'
 import {SearchBar} from './SearchBar'
-import {DragTest} from './DragTest'
 
 enableMapSet()
 
@@ -28,9 +27,9 @@ function App() {
       </span>
     </h1>
     <SearchBar/>
-    <DragTest/>
-    {/*<PinnedSection/>*/}
-    {/*<LinksSection/>*/}
+    {/*<DragTest/>*/}
+    <PinnedSection/>
+    <LinksSection/>
     <PegaFooter/>
     <PinnedLinkIDsSubscriber/>
     {isLoading ? <div className={'z-50 bg-gray-100 fixed top-0 left-0 right-0 bottom-0'}/> : null}

@@ -10,8 +10,6 @@ specifiers:
   '@types/react-dom': ^17.0.9
   autoprefixer: ^9
   immer: ^9.0.6
-  muuri: ^0.9.0
-  muuri-react: github:marcelchastain/muuri-react#react17
   postcss: ^7
   react: ^17.0.2
   react-dom: ^17.0.2
@@ -32,8 +30,6 @@ dependencies:
   '@types/react': 17.0.20
   '@types/react-dom': 17.0.9
   immer: 9.0.6
-  muuri: 0.9.5
-  muuri-react: github.com/marcelchastain/muuri-react/f4bbdee536dd826dde0bac4f2e0bf2ac4551d268_muuri@0.9.5+react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-hotkeys-hook: 3.4.0_react-dom@17.0.2+react@17.0.2
@@ -8656,10 +8652,6 @@ packages:
       thunky: 1.1.0
     dev: false
 
-  /muuri/0.9.5:
-    resolution: {integrity: sha512-nJL9/Pd5IaIXGAVunBs/LLQ+v6tPkvlqCYrlauWESgkVFr+F+CRf8HnayRh4AqiQ1S/PIEN39fhJSe4L5rLlxg==}
-    dev: false
-
   /nan/2.15.0:
     resolution: {integrity: sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==}
     requiresBuild: true
@@ -12729,19 +12721,4 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
-    dev: false
-
-  github.com/marcelchastain/muuri-react/f4bbdee536dd826dde0bac4f2e0bf2ac4551d268_muuri@0.9.5+react@17.0.2:
-    resolution: {tarball: https://codeload.github.com/marcelchastain/muuri-react/tar.gz/f4bbdee536dd826dde0bac4f2e0bf2ac4551d268}
-    id: github.com/marcelchastain/muuri-react/f4bbdee536dd826dde0bac4f2e0bf2ac4551d268
-    name: muuri-react
-    version: 3.1.6
-    peerDependencies:
-      muuri: ^0.8.0
-      react: ^17.0.2
-    dependencies:
-      '@babel/runtime': 7.15.4
-      muuri: 0.9.5
-      prop-types: 15.7.2
-      react: 17.0.2
     dev: false

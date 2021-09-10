@@ -2,26 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.muuri-item-hidden {
-    @apply z-0;
-}
-
-.muuri-item {
-    @apply z-10;
-}
-
-.muuri-item-releasing {
-    @apply z-20;
-}
-
-.muuri-item-dragging {
-    @apply z-30;
-}
-
-.muuri-item-dragging .link-card {
-    @apply transform scale-110 opacity-80;
-}
-
 .anchor-none {
     overflow-anchor: none;
 }
