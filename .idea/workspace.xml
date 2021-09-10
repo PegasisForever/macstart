@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="fix loading page flash">
+    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="disable pin when dragging card">
+      <change afterPath="$PROJECT_DIR$/netlify.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/pnpm-preinstaller/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/pnpm-preinstaller/manifest.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BaseLinkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/BaseLinkCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +55,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -98,7 +99,7 @@
       <workItem from="1631133271925" duration="118000" />
       <workItem from="1631133425164" duration="52000" />
       <workItem from="1631133500390" duration="40913000" />
-      <workItem from="1631219607373" duration="14200000" />
+      <workItem from="1631219607373" duration="14873000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1631130185591</created>
@@ -198,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631233373505</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="disable pin when dragging card">
+      <created>1631233945496</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1631233945496</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +239,8 @@
     <MESSAGE value="allow pin cards" />
     <MESSAGE value="save pinned links" />
     <MESSAGE value="fix loading page flash" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix loading page flash" />
+    <MESSAGE value="disable pin when dragging card" />
+    <option name="LAST_COMMIT_MESSAGE" value="disable pin when dragging card" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

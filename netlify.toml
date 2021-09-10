@@ -1,0 +1,8 @@
+[[plugins]]
+    package = "./plugins/pnpm-preinstaller"
+
+[build]
+    publish = "build"
+
+[build.environment]
+    NPM_FLAGS="--prefix=/dev/null"
