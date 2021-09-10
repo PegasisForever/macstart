@@ -3,32 +3,38 @@ import pinFilled from './icons/pin_filled.svg'
 import {Link, linksMapState, pinnedLinkIDsState} from './Link'
 import {useDrag, useRefresh} from 'muuri-react'
 import {useWindowSize} from 'react-use-size'
-import {useMemo} from 'react'
-import {remToPx} from './utils'
+import React, {useMemo} from 'react'
+import {isTouchScreen, remToPx} from './utils'
 import openInNewIcon from './icons/open_in_new_outline.svg'
 import {useRecoilValue, useSetRecoilState} from 'recoil'
 import produce from 'immer'
-import React from 'react'
+import dragHandleIcon from './icons/drag_handle.svg'
 
 export type BaseLinkCardProps = {
   link: Link,
   showPinned: boolean, // if false, only show pin when hovered
   onPinClicked: () => void,
   disabled: boolean,
+  showDragHandle: boolean,
 }
 
 function BaseLinkCard(props: BaseLinkCardProps) {
   const link = props.link
   return <a
-    className={'link-card relative group shadow-md hover:shadow-xl bg-white rounded-md duration-100 w-full h-full flex justify-start items-center p-2 overflow-hidden'}
+    className={'link-card relative group shadow-md hover:shadow-xl bg-white rounded-md duration-100 w-full h-full flex justify-start items-center p-2 overflow-hidden ' + (props.showDragHandle ? 'pl-8' : '')}
     href={link.url}
     target="_blank"
     rel="noreferrer"
     onClick={(e) => {
       if (props.disabled) e.preventDefault()
     }}>
+    {props.showDragHandle ?
+      <div className={'absolute h-full left-0 top-0 w-12 flex items-center mobile-drag-handle'}>
+        <img className={'opacity-50 w-8 h-8'} src={dragHandleIcon} alt=""/>
+      </div> :
+      null}
     {link.iconUrl ? <img className={'w-12 h-12 rounded-md'} src={link.iconUrl} alt={''}/> : null}
-    <div className={'flex flex-col flex-1 min-w-0 pl-2'}>
+    <div className={'flex flex-col flex-1 min-w-0 ' + ((props.showDragHandle && link.iconUrl === null) ? '' : 'pl-2')}>
       <span className={'text-xl font-medium truncate'}
             title={props.link.title}>
         {link.title}
@@ -38,7 +44,7 @@ function BaseLinkCard(props: BaseLinkCardProps) {
       <span className={'text-gray-500 truncate'}>{link.description}</span>
     </div>
     <div
-      className={'absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-white via-white duration-100 ' + (props.link.pinned ? '' : 'opacity-0 group-hover:opacity-100')}/>
+      className={'absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-white via-white duration-100 ' + ((props.link.pinned || props.showPinned) ? '' : 'opacity-0 group-hover:opacity-100')}/>
     <button
       className={'absolute right-0 top-0 h-full w-14 flex items-center justify-center duration-100 group-hover:opacity-50 hover:bg-gray-300 ' + (props.showPinned ? 'opacity-50' : 'opacity-0')}
       title={link.pinned ? 'Unpin this link' : 'Pin this link'}
@@ -64,9 +70,9 @@ export function LinkCard(props: { linkID: string, width: string, section: 'pinne
     <div className={'relative'}>
       <BaseLinkCard
         link={link}
-        showPinned={props.section === 'pinned' ? false : link.pinned}
+        showPinned={isTouchScreen ? true : (props.section === 'pinned' ? false : link.pinned)}
         onPinClicked={() => {
-          if (!isDragging){
+          if (!isDragging) {
             setPinnedLinkIDs(oldIDs => produce(oldIDs, draft => {
               if (link.pinned) {
                 const removeI = draft.indexOf(props.linkID)
@@ -79,6 +85,7 @@ export function LinkCard(props: { linkID: string, width: string, section: 'pinne
             }))
           }
         }}
+        showDragHandle={props.section === 'pinned' && link.pinned && isTouchScreen}
         disabled={isDragging}/>
     </div>
   </div>

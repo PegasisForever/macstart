@@ -7,6 +7,7 @@ import {pinnedLinkIDsState} from './Link'
 import {SectionTitle} from './SectionTitle'
 import {useRecoilState} from 'recoil'
 import {DecoratedGrid} from 'muuri-react/dist/types/interfaces'
+import {isTouchScreen} from './utils'
 
 export function PinnedSection() {
   const cardWidth = useCardWidth()
@@ -20,17 +21,11 @@ export function PinnedSection() {
     <MuuriComponent sort={pinnedLinkIDs}
                     ref={gridRef as Ref<DecoratedGrid>}
                     addOptions={{show: false}}
+                    dragHandle={isTouchScreen ? '.mobile-drag-handle' : undefined}
                     dragEnabled
                     dragFixed
                     dragStartPredicate={(item: DecoratedItem, e: DraggerStartEvent | DraggerMoveEvent | DraggerEndEvent | DraggerCancelEvent) => {
-                      const isTouch = (e.srcEvent instanceof TouchEvent) || (e.srcEvent instanceof PointerEvent && e.srcEvent.pointerType !== 'mouse')
-                      if (isTouch) {
-                        // fixme
-                        // if (e.deltaTime > 300) return e.deltaX === 0 && e.deltaY === 0
-                        if (e.deltaTime > 300) return true
-                      } else {
-                        if (e.type === 'move') return true
-                      }
+                      if (e.type === 'move') return true
                     }}
                     onDragEnd={item => {
                       const linkOrder = item.getGrid().getItems().map(item => item.getKey() as string)
