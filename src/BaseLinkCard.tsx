@@ -66,16 +66,18 @@ export function LinkCard(props: { linkID: string, width: string, section: 'pinne
         link={link}
         showPinned={props.section === 'pinned' ? false : link.pinned}
         onPinClicked={() => {
-          setPinnedLinkIDs(oldIDs => produce(oldIDs, draft => {
-            if (link.pinned) {
-              const removeI = draft.indexOf(props.linkID)
-              if (removeI > -1) {
-                draft.splice(removeI, 1)
+          if (!isDragging){
+            setPinnedLinkIDs(oldIDs => produce(oldIDs, draft => {
+              if (link.pinned) {
+                const removeI = draft.indexOf(props.linkID)
+                if (removeI > -1) {
+                  draft.splice(removeI, 1)
+                }
+              } else {
+                draft.push(props.linkID)
               }
-            } else {
-              draft.push(props.linkID)
-            }
-          }))
+            }))
+          }
         }}
         disabled={isDragging}/>
     </div>

@@ -15,7 +15,6 @@ enableMapSet()
 function App() {
   const [isLoading, setIsLoading] = useState(true)
   useReadyStateEffect(() => {
-    console.log('complete')
     setIsLoading(false)
   }, [], 'complete')
 
