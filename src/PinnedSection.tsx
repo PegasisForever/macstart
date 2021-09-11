@@ -42,11 +42,11 @@ export function PinnedSection() {
     setActiveId(null)
   }
 
-  return <div className={'bg-gray-200 pt-4 pb-6 md:pb-4 pl-4 pr-4 anchor-none'}>
+  return <div className={'bg-gray-200 dark:bg-gray-800 pt-4 pb-6 md:pb-4 pl-4 pr-4 anchor-none duration-100'}>
     <SectionTitle>
       Pinned
       <span
-        className={'text-gray-500 text-base md:pl-2 block md:inline font-normal'}>Drag and drop to rearrange cards.</span>
+        className={'text-gray-500 dark:text-gray-400 text-base md:pl-2 block md:inline font-normal'}>Drag and drop to rearrange cards.</span>
     </SectionTitle>
     <DndContext
       sensors={sensors}

@@ -123,7 +123,7 @@ const links = [
 
 export const pinnedLinkIDsState = atom<Array<string>>({
   key: 'pinnedLinkIDsState',
-  default: JSON.parse(window.localStorage.getItem('pinned-links') ?? '[]'),
+  default: JSON.parse(localStorage.getItem('pinned-links') ?? '[]'),
 })
 
 export const linksMapState = selector<Map<string, Link>>({
@@ -266,7 +266,7 @@ export const linkSectionsState = selector<Array<{ name: string, links: Array<Lin
 
 export function PinnedLinkIDsSubscriber() {
   const pinnedLinkIDs = useRecoilValue(pinnedLinkIDsState)
-  window.localStorage.setItem('pinned-links', JSON.stringify(pinnedLinkIDs))
+  localStorage.setItem('pinned-links', JSON.stringify(pinnedLinkIDs))
   return null
 }
 

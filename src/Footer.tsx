@@ -5,7 +5,7 @@ function Link(props: { children: ReactChild, href: string }) {
 }
 
 export function PegaFooter() {
-  return <div className={'text-gray-400 text-center mt-8 mb-8'}>
+  return <div className={'text-gray-400 dark:text-gray-500 text-center mt-8 mb-8'}>
     <p>
       A personal project by{' '}
       <Link href="https://pegas.is/">Pegasis</Link>.
