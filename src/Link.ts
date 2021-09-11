@@ -1,6 +1,5 @@
 import {atom, selector, useRecoilValue} from 'recoil'
 import {immerable} from 'immer'
-import favicon from './favicon.png'
 
 export class Link {
   [immerable] = true
@@ -110,7 +109,7 @@ const links = [
   new Link('ombuds', 'Ombuds Office', 'https://mcmaster.ca/ombuds/', null, 'awawa'),
   new Link('pcc', 'Pride Community Centre', 'https://msumcmaster.ca/service/pcc/', null, 'awawa'),
   new Link('shec', 'Student Health Education Centre', 'https://msumcmaster.ca/service/shec/', null, 'awawa'),
-  new Link('spark', 'Spark', 'https://msumcmaster.ca/service/spark/', favicon, 'awawa'),
+  new Link('spark', 'Spark', 'https://msumcmaster.ca/service/spark/', null, 'awawa'),
   new Link('swhat', 'Student Walk Home Attendant Team', 'https://msumcmaster.ca/service/swhat/', null, 'awawa'),
   new Link('silhouette', 'The Silhouette', 'https://www.thesil.ca/', null, 'awawa'),
   new Link('underground-design', 'Underground Media + Design', 'https://undergrounddesign.ca/', null, 'awawa'),
