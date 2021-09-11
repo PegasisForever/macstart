@@ -19,7 +19,7 @@ export function PinnedSection() {
     }),
     useSensor(TouchSensor, {
       activationConstraint: {
-        delay: 200,
+        delay: 300,
         tolerance: 5,
       },
     }),

@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="fix drag animation">
-      <change beforePath="$PROJECT_DIR$/src/Link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Link.ts" afterDir="false" />
+    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="remove favicon">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PinnedSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/PinnedSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631370530614</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="remove favicon">
+      <created>1631370588719</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1631370588719</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +331,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="pin button" />
     <MESSAGE value="pinned section and links section" />
     <MESSAGE value="responsive grid" />
     <MESSAGE value="section title" />
@@ -346,7 +355,8 @@
     <MESSAGE value="search works" />
     <MESSAGE value="use tailwind jit" />
     <MESSAGE value="fix drag animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix drag animation" />
+    <MESSAGE value="remove favicon" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove favicon" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -16,7 +16,7 @@ export type BaseLinkCardProps = {
   onPinClicked: () => void,
   disabled: boolean,
   showDragHandle: boolean,
-  scale: boolean,
+  className?: string,
 }
 
 const BaseLinkCard = forwardRef<HTMLAnchorElement, BaseLinkCardProps>((props, ref) => {
@@ -24,7 +24,7 @@ const BaseLinkCard = forwardRef<HTMLAnchorElement, BaseLinkCardProps>((props, re
   return <a
     draggable={false}
     ref={ref}
-    className={'link-card relative group shadow-md hover:shadow-xl bg-white rounded-md duration-100 flex justify-start items-center p-2 overflow-hidden pl-4 ' + (props.scale ? 'transform scale-110 opacity-80' : '')}
+    className={'link-card relative group shadow-md hover:shadow-xl bg-white rounded-md duration-100 flex justify-start items-center p-2 overflow-hidden pl-4 ' + (props.className ?? '')}
     href={link.url}
     target="_blank"
     rel="noreferrer"
@@ -79,7 +79,7 @@ export const LinkCard = forwardRef<HTMLDivElement, LinkCardProps>((props, ref) =
     }}
     {...props.elemAttributes}>
     <BaseLinkCard
-      scale={scale}
+      className={(scale ? 'transform scale-110 opacity-80 ' : '') + (props.section === 'pinned' ? 'no-long-press' : '')}
       link={link}
       showPinned={isTouchScreen ? true : (props.section === 'pinned' ? false : link.pinned)}
       onPinClicked={() => {
