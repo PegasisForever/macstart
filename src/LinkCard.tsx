@@ -2,7 +2,7 @@ import pinOutlined from './icons/pin_outline.svg'
 import pinFilled from './icons/pin_filled.svg'
 import {Link, linksMapState, pinnedLinkIDsState} from './Link'
 import {useWindowSize} from 'react-use-size'
-import React, {forwardRef} from 'react'
+import React, {forwardRef, useState} from 'react'
 import {isTouchScreen, remToPx} from './utils'
 import openInNewIcon from './icons/open_in_new_outline.svg'
 import {useRecoilValue, useSetRecoilState} from 'recoil'
@@ -16,6 +16,7 @@ export type BaseLinkCardProps = {
   onPinClicked: () => void,
   disabled: boolean,
   showDragHandle: boolean,
+  scale: boolean,
 }
 
 const BaseLinkCard = forwardRef<HTMLAnchorElement, BaseLinkCardProps>((props, ref) => {
@@ -23,7 +24,7 @@ const BaseLinkCard = forwardRef<HTMLAnchorElement, BaseLinkCardProps>((props, re
   return <a
     draggable={false}
     ref={ref}
-    className={'link-card relative group shadow-md hover:shadow-xl bg-white rounded-md duration-100 flex justify-start items-center p-2 overflow-hidden pl-4'}
+    className={'link-card relative group shadow-md hover:shadow-xl bg-white rounded-md duration-100 flex justify-start items-center p-2 overflow-hidden pl-4 ' + (props.scale ? 'transform scale-110 opacity-80' : '')}
     href={link.url}
     target="_blank"
     rel="noreferrer"
@@ -61,21 +62,24 @@ export type LinkCardProps = { linkID: string, isDragging?: boolean, section: 'pi
 export const LinkCard = forwardRef<HTMLDivElement, LinkCardProps>((props, ref) => {
   const linksMap = useRecoilValue(linksMapState)
   const setPinnedLinkIDs = useSetRecoilState(pinnedLinkIDsState)
+  const [scale, setScale] = useState<boolean>(props.isDragging === true)
 
   const link = linksMap.get(props.linkID)!
-  // todo className + (props.isDragging ? 'transform scale-110 opacity-80' : '')
-  return <div key={props.linkID}
-              className={'p-2 md:p-4 min-w-0 ' + (props.invisible ? 'opacity-0 ' : '') + (props.isDragging ? 'transform scale-110 opacity-80' : '')}
-              ref={ref}
-              onContextMenu={e => {
-                if (isTouchScreen && props.section === 'pinned') {
-                  e.preventDefault()
-                  e.stopPropagation()
-                  return false
-                }
-              }}
-              {...props.elemAttributes}>
+  return <div
+    onMouseUp={() => setScale(false)}
+    onTouchEnd={() => setScale(false)}
+    className={'p-2 md:p-4 min-w-0 ' + (props.invisible ? 'opacity-0 ' : '')}
+    ref={ref}
+    onContextMenu={e => {
+      if (isTouchScreen && props.section === 'pinned') {
+        e.preventDefault()
+        e.stopPropagation()
+        return false
+      }
+    }}
+    {...props.elemAttributes}>
     <BaseLinkCard
+      scale={scale}
       link={link}
       showPinned={isTouchScreen ? true : (props.section === 'pinned' ? false : link.pinned)}
       onPinClicked={() => {

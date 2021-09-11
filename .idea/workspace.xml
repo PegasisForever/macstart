@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="search works">
+    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="use tailwind jit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SearchBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/SearchBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631316966639</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="use tailwind jit">
+      <created>1631319199218</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1631319199218</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +315,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="setup tailwind css" />
     <MESSAGE value="link card" />
     <MESSAGE value="pin button" />
     <MESSAGE value="pinned section and links section" />
@@ -334,7 +339,8 @@
     <MESSAGE value="dnd kit wip" />
     <MESSAGE value="completely switches to react-dnd" />
     <MESSAGE value="search works" />
-    <option name="LAST_COMMIT_MESSAGE" value="search works" />
+    <MESSAGE value="use tailwind jit" />
+    <option name="LAST_COMMIT_MESSAGE" value="use tailwind jit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
