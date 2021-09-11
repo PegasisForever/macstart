@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="dark mode">
+    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="dark mode tweaks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DarkModeToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/DarkModeToggle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Link.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631382298252</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="dark mode tweaks">
+      <created>1631382742207</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1631382742207</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +353,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="section title" />
     <MESSAGE value="add links section data" />
     <MESSAGE value="add footer" />
     <MESSAGE value="minor ui changes" />
@@ -369,7 +377,8 @@
     <MESSAGE value="remove favicon" />
     <MESSAGE value="disable ios long press menu" />
     <MESSAGE value="dark mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="dark mode" />
+    <MESSAGE value="dark mode tweaks" />
+    <option name="LAST_COMMIT_MESSAGE" value="dark mode tweaks" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
