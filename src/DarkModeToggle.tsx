@@ -18,7 +18,7 @@ function DIcon(props: { className?: string }) {
 
 export function DarkModeToggle(props: { isDark: boolean, onToggle: (newValue: boolean) => void }) {
   const Icon = props.isDark ? LIcon : DIcon
-  return <button className={'absolute right-2 top-2 p-4 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600'}
+  return <button className={'absolute right-1 top-1 md:right-2 md:top-2 p-2 md:p-4 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600'}
                  onClick={() => props.onToggle(!props.isDark)}>
     <Icon className={'w-8 h-8 text-black dark:text-gray-100'}/>
   </button>
