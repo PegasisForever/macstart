@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="add a new link button">
+    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="dialog transition">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SubmitNewLinkSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubmitNewLinkSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +108,7 @@
       <workItem from="1631133425164" duration="52000" />
       <workItem from="1631133500390" duration="40913000" />
       <workItem from="1631219607373" duration="26860000" />
-      <workItem from="1631470421055" duration="10422000" />
+      <workItem from="1631470421055" duration="12954000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1631130185591</created>
@@ -375,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631485428142</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="dialog transition">
+      <created>1631486249811</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1631486249811</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,7 +402,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix loading page flash" />
     <MESSAGE value="disable pin when dragging card" />
     <MESSAGE value="netlify" />
     <MESSAGE value="change npm flags" />
@@ -419,7 +426,8 @@
     <MESSAGE value="add firebase" />
     <MESSAGE value="add link dialog" />
     <MESSAGE value="add a new link button" />
-    <option name="LAST_COMMIT_MESSAGE" value="add a new link button" />
+    <MESSAGE value="dialog transition" />
+    <option name="LAST_COMMIT_MESSAGE" value="dialog transition" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
