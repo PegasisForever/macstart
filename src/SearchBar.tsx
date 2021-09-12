@@ -27,7 +27,7 @@ export function SearchBar() {
     <div
       className={'inline-block flex w-full md:w-[32rem] md:ml-auto md:mr-auto duration-100 bg-white dark:text-gray-100 border-2 border-white dark:bg-gray-700 dark:focus-within:bg-gray-600 dark:border-gray-400 dark:focus-within:border-gray-100 rounded-md shadow-lg focus-within:shadow-2xl'}>
       <SearchIcon className={'flex-none w-8 h-8 m-2'}/>
-      <input className={'flex-grow h-12 bg-transparent text-xl outline-none'} type="text" value={text}
+      <input className={'flex-grow h-12 bg-transparent text-xl border-none focus:ring-0 outline-none'} type="text" value={text}
              ref={inputRef}
              onChange={e => setText(e.target.value)}/>
     </div>

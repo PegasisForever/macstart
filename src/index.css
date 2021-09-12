@@ -7,11 +7,11 @@
 }
 
 ::selection {
-    @apply bg-yellow-300;
+    @apply bg-blue-300;
 }
 
 .dark ::selection {
-    @apply bg-yellow-800;
+    @apply bg-blue-800;
 }
 
 body {
@@ -21,4 +21,12 @@ body {
 .no-long-press {
     -webkit-touch-callout: none !important;
     -webkit-user-select: none !important;
+}
+
+.no-drag {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
 }

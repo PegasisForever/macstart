@@ -6,8 +6,7 @@ import {useRecoilValue, useSetRecoilState} from 'recoil'
 import produce from 'immer'
 import {useSortable} from '@dnd-kit/sortable'
 import {CSS} from '@dnd-kit/utilities'
-import {logEvent} from 'firebase/analytics'
-import {analytics} from './firebase'
+import {logPinLinkEvent} from './firebase'
 
 export type BaseLinkCardProps = {
   link: Link,
@@ -56,10 +55,12 @@ const BaseLinkCard = forwardRef<HTMLAnchorElement, BaseLinkCardProps>((props, re
   return <a
     draggable={false}
     ref={ref}
-    className={'h-full relative group shadow-md hover:shadow-xl bg-white dark:bg-gray-600 rounded-md duration-100 flex justify-start items-center p-2 overflow-hidden ' + (props.className ?? '')}
+    className={'no-drag h-full relative group shadow-md hover:shadow-xl bg-white dark:bg-gray-600 rounded-md duration-100 flex justify-start items-center p-2 overflow-hidden ' + (props.className ?? '')}
     href={link.url}
     target="_blank"
     rel="noreferrer"
+    onDragStart={e => e.preventDefault()}
+    onDragOver={e => e.preventDefault()}
     onClick={(e) => {
       if (props.disabled) e.preventDefault()
     }}>
@@ -122,7 +123,7 @@ export const LinkCard = forwardRef<HTMLDivElement, LinkCardProps>((props, ref) =
                 draft.splice(removeI, 1)
               }
             } else {
-              logEvent(analytics, 'pin_link', {id: props.linkID})
+              logPinLinkEvent(props.linkID)
               draft.push(props.linkID)
             }
           }))

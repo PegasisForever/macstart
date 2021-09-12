@@ -129,7 +129,7 @@ const links = [
   new Link('campus-events', 'Campus Events', 'https://www.instagram.com/msucampusevents/', null, 'McMaster events, concerts, comedians, speakers & more.'),
   new Link('starrez', 'Residence Portal', 'https://liveatmac.mcmaster.ca/PortalX', null, 'Apply for residence and finding roommates.', 'housing'),
   new Link('hospitality', 'Hospitality Services', 'https://hospitality.mcmaster.ca/', null, null),
-  new Link('food-on-campus', 'Food on Campus', 'https://hospitality.mcmaster.ca/locations/on-campus/', null, 'Tells you where to eat.'),
+  new Link('food-on-campus', 'Food on Campus', 'https://hospitality.mcmaster.ca/locations/on-campus/', null, 'A list of restaurants on campus and their menus.'),
   new Link('msu', 'McMaster Student Union', 'https://msumcmaster.ca/', msuLogo, 'Advocating student interests.'),
   new Link('clubs', 'Clubs Directory', 'https://msumcmaster.ca/clubs/clubs-directory/', null, 'A list of all clubs in McMaster.'),
   new Link('opirg', 'OPIRG McMaster', 'https://www.opirgmcmaster.org/', opirgLogo, 'Helping students organize around issues.'),
@@ -142,7 +142,7 @@ const links = [
   new Link('underground-design', 'Underground Media + Design', 'https://undergrounddesign.ca/', undergroundDesignLogo, 'Full-service media, design & print shop.'),
   new Link('fireball-academy', 'Fireball Academy', 'https://fireballacademy.mcmaster.ca/', fireballLogo, 'Enhance your personal and professional skills.'),
   new Link('oscar', 'OSCARplus', 'https://www.oscarplusmcmaster.ca/home.htm', null, 'Find your coop opportunities.'),
-  new Link('echo360', 'echo 360', 'https://echo360.ca/courses', echo360Logo, 'Access your course materials'),
+  new Link('echo360', 'echo 360', 'https://echo360.ca/courses', echo360Logo, 'Access your course materials.'),
   new Link('mcmasterai', 'McMaster AI Society', 'https://www.mcmasterai.com/', aiSocietyLogo, 'Change the world with AI.'),
   new Link('brand-standards', 'Brand Standards', 'https://brand.mcmaster.ca/', null, 'McMaster brand guidelines, logo downloads and more.'),
 ]
