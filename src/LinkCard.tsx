@@ -6,6 +6,8 @@ import {useRecoilValue, useSetRecoilState} from 'recoil'
 import produce from 'immer'
 import {useSortable} from '@dnd-kit/sortable'
 import {CSS} from '@dnd-kit/utilities'
+import {logEvent} from 'firebase/analytics'
+import {analytics} from './firebase'
 
 export type BaseLinkCardProps = {
   link: Link,
@@ -120,6 +122,7 @@ export const LinkCard = forwardRef<HTMLDivElement, LinkCardProps>((props, ref) =
                 draft.splice(removeI, 1)
               }
             } else {
+              logEvent(analytics, 'pin_link', {id: props.linkID})
               draft.push(props.linkID)
             }
           }))

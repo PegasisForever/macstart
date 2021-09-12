@@ -1,4 +1,5 @@
 import 'web-animations-js'
+import './firebase'
 import React, {useEffect, useState} from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
@@ -10,6 +11,7 @@ import {enableMapSet} from 'immer'
 import {PinnedLinkIDsSubscriber} from './Link'
 import {SearchBar} from './SearchBar'
 import {DarkModeToggle} from './DarkModeToggle'
+import {SubmitNewLinkSection} from './SubmitNewLinkSection'
 
 enableMapSet()
 
@@ -36,6 +38,7 @@ function App() {
     <SearchBar/>
     <PinnedSection/>
     <LinksSection/>
+    <SubmitNewLinkSection/>
     <PegaFooter/>
     <PinnedLinkIDsSubscriber/>
   </div>

@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="add logos">
+    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="slight ui tweak">
+      <change afterPath="$PROJECT_DIR$/src/SubmitNewLinkSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/firebase.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LinkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -347,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631406635003</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="slight ui tweak">
+      <created>1631407183773</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1631407183773</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +377,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="minor ui changes" />
     <MESSAGE value="add links" />
     <MESSAGE value="allow pin cards" />
     <MESSAGE value="save pinned links" />
@@ -391,7 +401,8 @@
     <MESSAGE value="dark mode tweaks" />
     <MESSAGE value="fill in the links" />
     <MESSAGE value="add logos" />
-    <option name="LAST_COMMIT_MESSAGE" value="add logos" />
+    <MESSAGE value="slight ui tweak" />
+    <option name="LAST_COMMIT_MESSAGE" value="slight ui tweak" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
