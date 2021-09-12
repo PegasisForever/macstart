@@ -68,7 +68,7 @@ const BaseLinkCard = forwardRef<HTMLAnchorElement, BaseLinkCardProps>((props, re
         {link.title}
         <OpenInNewIcon className={'w-5 h-5 ml-1 mb-0.5 inline duration-100 opacity-0 group-hover:opacity-40'}/>
       </span>
-      <span className={'text-gray-500 dark:text-gray-400 truncate'}>{link.description ?? link.title}</span>
+      <span className={'text-gray-500 dark:text-gray-350 truncate'}>{link.description ?? link.title}</span>
     </div>
     <div
       className={'absolute right-0 top-0 h-full w-20 duration-100 bg-gradient-to-l from-white dark:from-gray-600 via-white dark:via-gray-600 ' + (props.showPinned ? '' : 'opacity-0 group-hover:opacity-100')}/>

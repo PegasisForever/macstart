@@ -4,39 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="fill in the links">
-      <change afterPath="$PROJECT_DIR$/src/logos/a2l.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/ai_society.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/campus_store.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/cfmu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/echo360.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/fireball.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/hmdl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/iclicker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/linkedin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/mac_anatomy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/marching_band.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/mcmaster.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/md_program.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/mosaic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/msu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/neuroscience_society.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/ombuds.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/opirg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/outlook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/pearson.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/reddit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/teams.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/the_silhouette.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/tophat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/underground_design.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/vena.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/vmware_horizon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logos/zoom.png" afterDir="false" />
+    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="add logos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Link.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LinkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -369,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631395820104</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="add logos">
+      <created>1631406635003</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1631406635003</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +366,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add footer" />
     <MESSAGE value="minor ui changes" />
     <MESSAGE value="add links" />
     <MESSAGE value="allow pin cards" />
@@ -413,7 +390,8 @@
     <MESSAGE value="dark mode" />
     <MESSAGE value="dark mode tweaks" />
     <MESSAGE value="fill in the links" />
-    <option name="LAST_COMMIT_MESSAGE" value="fill in the links" />
+    <MESSAGE value="add logos" />
+    <option name="LAST_COMMIT_MESSAGE" value="add logos" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
