@@ -54,7 +54,7 @@ const BaseLinkCard = forwardRef<HTMLAnchorElement, BaseLinkCardProps>((props, re
   return <a
     draggable={false}
     ref={ref}
-    className={'h-full relative group shadow-md hover:shadow-xl bg-white dark:bg-gray-600 rounded-md duration-100 flex justify-start items-center p-2 overflow-hidden pl-4 ' + (props.className ?? '')}
+    className={'h-full relative group shadow-md hover:shadow-xl bg-white dark:bg-gray-600 rounded-md duration-100 flex justify-start items-center p-2 overflow-hidden ' + (props.className ?? '')}
     href={link.url}
     target="_blank"
     rel="noreferrer"
@@ -62,7 +62,7 @@ const BaseLinkCard = forwardRef<HTMLAnchorElement, BaseLinkCardProps>((props, re
       if (props.disabled) e.preventDefault()
     }}>
     {link.iconUrl ? <img className={'w-12 h-12 rounded-md'} src={link.iconUrl} alt={''}/> : null}
-    <div className={'flex flex-col flex-1 min-w-0 ' + (link.iconUrl === null ? '' : 'pl-2')}>
+    <div className={'flex flex-col flex-1 min-w-0 pl-2'}>
       <span className={'text-xl font-medium truncate dark:text-gray-100'}
             title={props.link.title}>
         {link.title}

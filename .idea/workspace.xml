@@ -4,12 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="dark mode tweaks">
+    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="fill in the links">
+      <change afterPath="$PROJECT_DIR$/src/logos/a2l.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/ai_society.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/campus_store.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/cfmu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/echo360.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/fireball.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/hmdl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/iclicker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/linkedin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/mac_anatomy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/marching_band.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/mcmaster.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/md_program.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/mosaic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/msu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/neuroscience_society.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/ombuds.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/opirg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/outlook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/pearson.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/reddit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/teams.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/the_silhouette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/tophat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/underground_design.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/vena.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/vmware_horizon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logos/zoom.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Link.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LinkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +69,7 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/icons" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/logos" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -60,6 +87,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/logos" />
       <recent name="$PROJECT_DIR$/src/icons" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -334,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631382742207</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="fill in the links">
+      <created>1631395820104</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1631395820104</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +388,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add links section data" />
     <MESSAGE value="add footer" />
     <MESSAGE value="minor ui changes" />
     <MESSAGE value="add links" />
@@ -378,7 +412,8 @@
     <MESSAGE value="disable ios long press menu" />
     <MESSAGE value="dark mode" />
     <MESSAGE value="dark mode tweaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="dark mode tweaks" />
+    <MESSAGE value="fill in the links" />
+    <option name="LAST_COMMIT_MESSAGE" value="fill in the links" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

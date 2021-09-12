@@ -10,6 +10,10 @@
     @apply bg-yellow-300;
 }
 
+.dark ::selection {
+    @apply bg-yellow-800;
+}
+
 body {
     -webkit-tap-highlight-color: transparent;
 }
