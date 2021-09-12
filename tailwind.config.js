@@ -1,7 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-    mode: 'jit',
+    // mode: 'jit',
     purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
     darkMode: 'class',
     theme: {
@@ -9,12 +9,13 @@ module.exports = {
             colors: {
                 gray: {
                     ...colors.gray,
-                    150: '#F4F4F5',
+                    150: '#ECECEE',
+                    250: '#DCDCE0',
                     600: '#535154',
-                    350: '#babac1',
+                    350: '#BBBBC1',
                 },
                 blue: {
-                    150: '#DBEAFE',
+                    150: '#CDE3FE',
                 },
             },
         },

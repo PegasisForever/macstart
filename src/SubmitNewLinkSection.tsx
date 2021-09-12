@@ -1,14 +1,8 @@
-import {Fragment, useState} from 'react'
+import React, {Fragment, useState} from 'react'
 import {Dialog} from '@headlessui/react'
 import produce from 'immer'
-
-function TextInput(props: { label: string, id: string, placeholder: string, value: string, onChange: (newValue: string) => void }) {
-  return <div className={'flex items-center'}>
-    <label htmlFor={props.id}>{props.label}</label>
-    <input type="text" id={props.id} value={props.value} placeholder={props.placeholder}
-           onChange={e => props.onChange(e.target.value)}/>
-  </div>
-}
+import {SectionTitle} from './SectionTitle'
+import {useGridColumns} from './LinkCard'
 
 type TextInputListProps = {
   inputs: Array<{
@@ -35,14 +29,22 @@ function TextInputList(props: TextInputListProps) {
   </>
 }
 
+function AddIcon(props: { className?: string }) {
+  return <svg className={props.className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+  </svg>
+}
+
 export function SubmitNewLinkSection() {
-  let [isOpen, setIsOpen] = useState(true)
+  let [isOpen, setIsOpen] = useState(false)
   let [textState, setTextState] = useState({
     urlText: '',
     titleText: '',
     descriptionText: '',
   })
   let [shouldSubmit, setShouldSubmit] = useState(false)
+  const gridColumns = useGridColumns()
 
   const inputs = [
     {
@@ -63,10 +65,17 @@ export function SubmitNewLinkSection() {
   ]
 
   // submitNewLink({url: 'awawa', title: 'title', description: 'desc'})
-  return <>
-    <button onClick={() => setIsOpen(true)}>
-      Submit
-    </button>
+  return <div className={'pl-4 pr-4 mt-4 md:mt-8'}>
+    <SectionTitle showDivider>Can't find your link?</SectionTitle>
+    <div className={'grid'} style={{gridTemplateColumns: `repeat(${gridColumns}, 1fr)`}}>
+      <button
+        className={'duration-100 bg-gray-150 hover:bg-gray-250 m-2 md:m-4 h-16 rounded-md border-4 border-gray-400 border-dashed flex justify-center items-center text-gray-800'}
+        onClick={() => setIsOpen(true)}>
+        <AddIcon className={'w-8 h-8'}/>
+        <span className={'text-lg'}>Add a New Link</span>
+      </button>
+    </div>
+
     <Dialog
       open={isOpen}
       onClose={() => setIsOpen(false)}
@@ -91,7 +100,7 @@ export function SubmitNewLinkSection() {
 
         <div className={'flex justify-end w-full mt-4'}>
           <button
-            className={'rounded-md duration-100 hover:bg-gray-300 px-4 py-2 mr-4'}
+            className={'rounded-md duration-100 hover:bg-gray-200 px-4 py-2 mr-4'}
             onClick={() => setIsOpen(false)}>
             Cancel
           </button>
@@ -103,5 +112,5 @@ export function SubmitNewLinkSection() {
         </div>
       </div>
     </Dialog>
-  </>
+  </div>
 }

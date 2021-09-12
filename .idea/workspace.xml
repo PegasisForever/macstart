@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="add firebase">
+    <list default="true" id="046aaf31-98d0-474c-813f-5f062bfefd83" name="Changes" comment="add link dialog">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Link.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Link.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SearchBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/SearchBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SubmitNewLinkSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/SubmitNewLinkSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +108,7 @@
       <workItem from="1631133425164" duration="52000" />
       <workItem from="1631133500390" duration="40913000" />
       <workItem from="1631219607373" duration="26860000" />
-      <workItem from="1631470421055" duration="8306000" />
+      <workItem from="1631470421055" duration="9578000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1631130185591</created>
@@ -369,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631410335226</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="add link dialog">
+      <created>1631484134373</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1631484134374</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +388,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="allow pin cards" />
     <MESSAGE value="save pinned links" />
     <MESSAGE value="fix loading page flash" />
     <MESSAGE value="disable pin when dragging card" />
@@ -413,7 +412,8 @@
     <MESSAGE value="add logos" />
     <MESSAGE value="slight ui tweak" />
     <MESSAGE value="add firebase" />
-    <option name="LAST_COMMIT_MESSAGE" value="add firebase" />
+    <MESSAGE value="add link dialog" />
+    <option name="LAST_COMMIT_MESSAGE" value="add link dialog" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
